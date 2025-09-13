@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-void display() 
+int main()
 {
-        //base das informacoes
-    char Estado1[01], Estado2[01], Codigo_da_Carta1[03], Codigo_da_Carta2[03], Cidade1[20], Cidade2[20];
+    //base das informacoes
+    char Estado1, Estado2, Codigo_da_Carta1[03], Codigo_da_Carta2[03], Cidade1[20], Cidade2[20];
    
     int Populacao1, Populacao2,  Pontos_Turisticos1, Pontos_Turisticos2;
   
@@ -16,17 +16,17 @@ void display()
 
     //Seleção do Estado1
     printf("Defina seu Estado(A à H): ");
-    scanf("%1s", Estado1);
+    scanf("%c", &Estado1);
     printf("\n");
 
     //Seleção da carta1
     printf("Defina o Código de sua carta(seguindo o estado e número de 01 à 04): ");
-    scanf("%3s", Codigo_da_Carta1);
+    scanf("%s", &Codigo_da_Carta1);
     printf("\n");
 
     //Seleção da Cidade1
     printf("Defina o nome de sua cidade:");
-    scanf("%20s", Cidade1);
+    scanf("%s", &Cidade1);
     printf("\n");
 
     //Seleção da população1
@@ -56,17 +56,17 @@ void display()
 
     //Seleção do Estado2
     printf("Defina seu Estado(A à H): ");       
-    scanf("%1s", Estado2);
+    scanf(" %c", &Estado2);
     printf("\n");
 
     //Seleção da carta2
     printf("Defina o Código de sua carta(seguindo o estado e número de 01 à 04): ");
-    scanf("%3s", Codigo_da_Carta2);
+    scanf("%3s", &Codigo_da_Carta2);
     printf("\n");
 
     //Seleção da Cidade2
     printf("Defina o nome de sua cidade:");
-    scanf("%20s", Cidade2);
+    scanf("%20s", &Cidade2);
     printf("\n");
 
     //Seleção da população2
@@ -101,15 +101,15 @@ void display()
     printf("\n\n");
 
     //Estado1
-    printf("Estado: %1s", Estado1);
+    printf("Estado: %c", Estado1);
     printf("\n\n");
     
     //Codigo da Carta
-    printf("Código da Carta: %3.2s", Codigo_da_Carta1);
+    printf("Código da Carta: %s", Codigo_da_Carta1);
     printf("\n\n");
     
     //Cidade
-    printf("Cidade: %20s", Cidade1 ); 
+    printf("Cidade: %s", Cidade1 ); 
     printf("\n\n");
 
     //População
@@ -133,7 +133,7 @@ void display()
     printf("\n\n");
 
     //Estado
-    printf("Estado: %1s", Estado2);
+    printf("Estado: %c", Estado2);
     printf("\n\n");
     
     //Codigo da Carta
@@ -159,13 +159,7 @@ void display()
     //Pontos turísticos
     printf("Pontos turísticos: %d", Pontos_Turisticos2);
     printf("\n");
-
     
     printf("\n\n");
-}
-
-int main()
-{
-    display();
     return 0;
 }
